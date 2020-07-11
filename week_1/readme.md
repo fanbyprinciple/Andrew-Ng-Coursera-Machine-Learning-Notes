@@ -22,3 +22,14 @@ batch gradient descent where the entire dataset is used.
 Running first code in octave:
 ![](helloworld.png)
 
+8. Matrix operations,addition scalar and matrixmultiplication.
+prediction = data matrix * parameters
+Properties not commutative, is associative,
+identity matrix
+
+9. Inverse of a matrix
+A.(A^-1) = A^-1.A = I
+matrix transpose 
+
+![](inverse_transpose.png)
+
