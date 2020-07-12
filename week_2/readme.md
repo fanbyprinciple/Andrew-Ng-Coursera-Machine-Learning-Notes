@@ -128,6 +128,19 @@ multiplying magic matrix by a unitary matrix
 
 ![](mul_magic.png)
 
-next video:
-https://www.coursera.org/learn/machine-learning/lecture/I7gx3/plotting-data
+### Plotting data
+![](myPlot.png)
 
+magicsquare of 5
+![](untitled.gif)
+
+bigger one
+![](wave15.png)
+
+### Cost function in octave
+Result:
+![](cost_function_octave.png)
+
+Next video:
+
+https://www.coursera.org/learn/machine-learning/lecture/WnQWH/vectorization
