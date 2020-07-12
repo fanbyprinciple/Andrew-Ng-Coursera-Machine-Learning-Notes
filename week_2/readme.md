@@ -141,6 +141,10 @@ bigger one
 Result:
 ![](cost_function_octave.png)
 
-Next video:
+### vectorisation 
 
-https://www.coursera.org/learn/machine-learning/lecture/WnQWH/vectorization
+Creating vectors instead of using for loop
+
+
+Exercise link:
+https://www.coursera.org/learn/machine-learning/programming/8f3qT/linear-regression
