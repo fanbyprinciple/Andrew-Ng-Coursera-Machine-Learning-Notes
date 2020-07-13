@@ -145,6 +145,42 @@ Result:
 
 Creating vectors instead of using for loop
 
+# Exercise :
+![](ex1_plot.png)
 
-Exercise link:
-https://www.coursera.org/learn/machine-learning/programming/8f3qT/linear-regression
+We store each example as a row in the the X
+matrix in Octave/MATLAB. To take into account the intercept term (θ0),
+we add an additional first column to X and set it to all ones. This allows
+us to treat θ0 as simply another ‘feature’
+
+for x^y, only square matrix arguments are permitted
+ and one argument must be scalar.  Use .^ for elementwise
+power.
+
+make sure you understand what you are trying to optimize and what is being updated. Keep in mind that the cost J(θ) is parameterized by the vector θ, not X and y. That is, we minimize the value of J(θ)
+by changing the values of the vector θ, not by changing X or y.
+
+A*B does a matrix
+multiply, while A.*B does an element-wise multiplication.
+
+
+The regression line
+![](ex1_regression_line.png)
+
+The cost updation function:
+![](cost_updation.png)
+
+My doubt how come the way I write the operator matters so much. Intuitively it shouldnt.
+
+The visualisation:
+![](cost_visualisation_ex1.png)
+![](contour_ex1.png)
+
+The exercise giving error:
+ Sorry, your answer was incorrect. Hint: For gradient de
+scent, we need to implement simultaneous updates for all v
+alues in theta.
+
+
+zqy6GCPgvxrowQmu
+
