@@ -19,9 +19,9 @@ for iter = 1:num_iters
 
      
 
-    h_x = X * theta - y
+    h_x = X * theta - y;
     
-    theta =  theta -  ((alpha/m) * h_x' * X)'
+    theta =  theta -  ((alpha/m) * h_x' * X)';
 
 
 

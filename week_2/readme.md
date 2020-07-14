@@ -146,6 +146,13 @@ Result:
 Creating vectors instead of using for loop
 
 # Exercise :
+
+To do:
+
+    1. implement it yourself the entire thing
+    2. The normalisation equation is still not correct
+    3. choosing a different alpha for getting better curve
+
 ![](ex1_plot.png)
 
 We store each example as a row in the the X

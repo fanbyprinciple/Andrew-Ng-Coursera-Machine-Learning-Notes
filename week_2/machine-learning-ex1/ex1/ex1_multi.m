@@ -50,7 +50,6 @@ pause;
 fprintf('Normalizing Features ...\n');
 
 [X mu sigma] = featureNormalize(X);
-
 % Add intercept term to X
 X = [ones(m, 1) X];
 
@@ -106,7 +105,10 @@ fprintf('\n');
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
 X_test = [1650 3]
-[X_test_normalised mu_test sigma_test] = featureNormalize(X_test)
+[X_test_normalised mu_test sigma_test] = featureNormalize(X_test);
+
+X_test_normalised = [1 X_test_normalised];
+
 
 price = X_test_normalised * theta; % You should change this
 
