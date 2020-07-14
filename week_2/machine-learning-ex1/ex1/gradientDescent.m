@@ -27,14 +27,19 @@ for iter = 1:num_iters
 
     % Save the cost J in every iteration 
     for j = 1:length(theta),
-      error = X * theta - y;
-      x_j = X(:,j)';
-      sum_term = (1/m) * sum(x_j * error);
-      full_term = alpha * sum_term;
-      disp(size(error))
-      disp(size(x_j))
-      theta(j) =  theta(j) - full_term;
+      error = (X * theta) - y;
+      x_j = X(:,j);
+      sum_term = alpha * (1/m) * sum(error.* x_j);
+      #disp(size(error));
+
+      theta(j) =  theta(j) - sum_term;
     endfor
+    
+    # why is this working and not my solution
+    #error = (X * theta) - y; 
+    #temp0 = theta(1) - ( alpha /m ) * sum(error.* X(:,1));
+    #temp1 = theta(2) - ( alpha /m ) * sum(error.* X(:,2));
+    #theta = [temp0; temp1];
     J_history(iter) = computeCost(X, y, theta);
 
 end

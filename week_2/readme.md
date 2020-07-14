@@ -182,5 +182,6 @@ scent, we need to implement simultaneous updates for all v
 alues in theta.
 
 
-zqy6GCPgvxrowQmu
+The cost function for multi
+![](cost_function_multi.png)
 
