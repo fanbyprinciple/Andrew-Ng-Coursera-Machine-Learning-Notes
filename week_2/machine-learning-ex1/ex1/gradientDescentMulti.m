@@ -19,14 +19,9 @@ for iter = 1:num_iters
 
      
 
-    error = X* theta - y;
-    temp0 = theta(1) - (alpha/m) * sum(error .* X(:,1));
-    temp1 = theta(2) - (alpha/m) * sum(error .* X(:,2));
-    temp2 = theta(3) - (alpha/m) * sum(error .* X(:,3));
-    theta = [temp0;temp1;temp2];
-
-
-
+    h_x = X * theta - y
+    
+    theta =  theta -  ((alpha/m) * h_x' * X)'
 
 
 

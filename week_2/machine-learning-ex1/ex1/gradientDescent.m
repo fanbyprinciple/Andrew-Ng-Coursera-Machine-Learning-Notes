@@ -7,6 +7,7 @@ function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
 m = length(y); % number of training examples
 J_history = zeros(num_iters, 1);
 
+size(theta)
 for iter = 1:num_iters
 
     % ====================== YOUR CODE HERE ======================
@@ -26,15 +27,14 @@ for iter = 1:num_iters
     % ============================================================
 
     % Save the cost J in every iteration 
-    for j = 1:length(theta),
-      error = (X * theta) - y;
-      x_j = X(:,j);
-      sum_term = alpha * (1/m) * sum(error.* x_j);
-      #disp(size(error));
-
-      theta(j) =  theta(j) - sum_term;
-    endfor
-    
+      
+    error = (X * theta) - y;
+    size(theta)
+    theta
+    sum_term = alpha * (1/m) * error' * X;
+    size(sum_term')
+    theta =  theta - sum_term';
+   
     # why is this working and not my solution
     #error = (X * theta) - y; 
     #temp0 = theta(1) - ( alpha /m ) * sum(error.* X(:,1));

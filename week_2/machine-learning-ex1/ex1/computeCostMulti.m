@@ -18,7 +18,7 @@ J = 0;
 
 
 % =========================================================================
-predictions = X * theta; 
+predictions = X * theta;
 J = 1/(2*m) * sum((predictions - y).^2);
 
 end
