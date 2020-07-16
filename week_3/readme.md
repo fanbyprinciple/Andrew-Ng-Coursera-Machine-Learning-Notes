@@ -32,7 +32,29 @@ A vectorized implementation is:
 choosing an optimisation algorithm
 is of importance
 
+In multiclass classification : one vs all 
+we select on class and see its probability agains t others.
+
+ans then to make prediction we choose the max value of the hypothesis function.
+
+Exercise
+![](suspect_question.png)
 
 
+## overfitting
+Is when the model fits the training data too perfectly
+
+reducing feeatures
+regularisation
+
+## regularisation
+adding a term to the cost function that penalisesfor usinglarge value of theta
+
+![](regularisation.png)
+ X is non-invertible if m < n, and may be non-invertible if m = n.
+
+## normal equation
+
+![](normal_equaton.png)
 Next video:
 https://www.coursera.org/learn/machine-learning/lecture/68Pol/multiclass-classification-one-vs-all
