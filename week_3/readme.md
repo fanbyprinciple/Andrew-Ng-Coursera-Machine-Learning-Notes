@@ -118,4 +118,16 @@ Just use prediction function instead of directly using X * theta
 Decision bounday
 ![](decision_boundary_ex.png)
 
+Non linear distribution:
+![](non_linear_distribution.png)
 
+Non linear decision boundary:
+![](non_linear_decision_boundary.png)
+
+Non linear decision boundary with lambda 0:
+
+![](lambda_0_decision_boundary.png)
+
+with lambda 1:
+
+![](lambda_1.png)

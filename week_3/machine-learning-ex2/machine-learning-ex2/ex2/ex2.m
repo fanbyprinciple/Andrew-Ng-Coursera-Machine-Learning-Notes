@@ -92,12 +92,18 @@ pause;
 
 %  Set options for fminunc
 options = optimset('GradObj', 'on', 'MaxIter', 400);
+# return s both gradients and cost
 
 %  Run fminunc to obtain the optimal theta
 %  This function will return theta and the cost 
 [theta, cost] = ...
 	fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
 
+#To specify the actual function we are minimizing, we use a \short-hand"
+#for specifying functions with the @(t) ( costFunction(t, X, y) ) . This
+#creates a function, with argument t, which calls your costFunction. This
+#allows us to wrap the costFunction for use with fminunc.
+  
 % Print theta to screen
 fprintf('Cost at theta found by fminunc: %f\n', cost);
 fprintf('Expected cost (approx): 0.203\n');
