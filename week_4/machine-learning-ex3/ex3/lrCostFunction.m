@@ -41,19 +41,21 @@ grad = zeros(size(theta));
 # y 5*1
 # theta 4*1
 
-z = X * theta
-# z 4*1
+z = X * theta;
+# z 5*1
+new_theta = theta;
+new_theta(1) = [];
 
-keyboard
+reg_cost =  lambda/(2 * m) * sum(new_theta.^ 2);
 
-J = 1/m * sum(-y .*log(sigmoid(z)) - (1-y).*log(sigmoid(1-z)))
+J = 1/m * sum(-y .*log(sigmoid(z)) - (1-y).*log(1-sigmoid(z))) + reg_cost;
+
+new_theta = [0; new_theta];
+
+reg_grad = lambda/m * new_theta;
 
 
-
-
-
-
-
+grad = (1/m * sum((sigmoid(z) - y ).* X))' .+ reg_grad;
 
 % =============================================================
 

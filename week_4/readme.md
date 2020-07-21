@@ -41,3 +41,6 @@ one vs all model where the answer y one of the vectors.
 
 Digits we need to classify:
 ![](digits.png)
+
+The cost functiondone. Predict function remains.
+
