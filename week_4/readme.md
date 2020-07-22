@@ -43,4 +43,7 @@ Digits we need to classify:
 ![](digits.png)
 
 The cost functiondone. Predict function remains.
+ Difficulty in prediction of one vs all
 
+neural network result:
+![](nn_result.png)

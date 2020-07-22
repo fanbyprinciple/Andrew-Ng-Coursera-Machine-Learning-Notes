@@ -1,5 +1,4 @@
 %% Machine Learning Online Class - Exercise 3 | Part 1: One-vs-all
-
 %  Instructions
 %  ------------
 %
@@ -34,9 +33,13 @@ fprintf('Loading and Visualizing Data ...\n')
 
 load('ex3data1.mat'); % training data stored in arrays X, y
 m = size(X, 1);
+# takes in the first element from the size parameter
 
 % Randomly select 100 data points to display
 rand_indices = randperm(m);
+# random indices upto m
+
+# all parameter of random 100 parameters
 sel = X(rand_indices(1:100), :);
 
 displayData(sel);
@@ -55,11 +58,18 @@ pause;
 % Test case for lrCostFunction
 fprintf('\nTesting lrCostFunction() with regularization');
 
-# its is just testing ? 
+# testing
 theta_t = [-2; -1; 1; 2];
+
+# just creating a random x with first column all ones
 X_t = [ones(5,1) reshape(1:15,5,3)/10];
+
+# greater than 0.5 is just to convert the values to 0 and 1
 y_t = ([1;0;1;0;1] >= 0.5);
+
+# The regularisation parameter
 lambda_t = 3;
+
 [J grad] = lrCostFunction(theta_t, X_t, y_t, lambda_t);
 
 fprintf('\nCost: %f\n', J);
@@ -71,6 +81,7 @@ fprintf(' 0.146561\n -0.548558\n 0.724722\n 1.398003\n');
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
 %% ============ Part 2b: One-vs-All Training ============
 fprintf('\nTraining One-vs-All Logistic Regression...\n')
 

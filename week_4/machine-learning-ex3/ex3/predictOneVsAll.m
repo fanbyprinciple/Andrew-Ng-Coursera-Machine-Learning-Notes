@@ -13,6 +13,7 @@ num_labels = size(all_theta, 1);
 
 % You need to return the following variables correctly 
 p = zeros(size(X, 1), 1);
+# p will be 5000 x 1
 
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
@@ -28,10 +29,16 @@ X = [ones(m, 1) X];
 %       max element, for more information see 'help max'. If your examples 
 %       are in rows, then, you can use max(A, [], 2) to obtain the max 
 %       for each row.
-%       
+%    
 
-p = max(all_theta, [], 2)
+# prediction is sigmoid of h(x)
+predictions = sigmoid(all_theta * X');
 
+
+[_ , p] = max(predictions', [], 2);
+
+# p should give out labels
+# check what is all_theta
 
 
 
