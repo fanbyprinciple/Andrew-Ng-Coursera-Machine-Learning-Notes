@@ -1,10 +1,11 @@
 # Neural Network Learning
 
-This includes training a neural network. 
+Training a multiclass neural network. 
 
 ![](binary_vs_multi.png)
 
-Neural net cost
+Neural net cost:
+
 ![](neural_net_cost.png)
 
 
@@ -138,9 +139,46 @@ We previously saw how to calculate the deltaVector. So once we compute our gradA
 
 Once you have verified once that your backpropagation algorithm is correct, you don't need to compute gradApprox again. The code to compute gradApprox can be very slow.
 
-Next video:
-https://www.coursera.org/learn/machine-learning/lecture/ND5G5/random-initialization
+## Random initialisation
 
+Initializing all theta weights to zero does not work with neural networks. When we backpropagate, all nodes will update to the same value repeatedly. Instead we can randomly initialize our weights for our Θ\ThetaΘ matrices using the following method:
 
+f the dimensions of Theta1 is 10x11, Theta2 is 10x11 and Theta3 is 1x11.
+
+Theta1 = rand(10,11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+Theta2 = rand(10,11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+Theta3 = rand(1,11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+
+## Putting it together
+
+First, pick a network architecture; choose the layout of your neural network, including how many hidden units in each layer and how many layers in total you want to have.
+
+    Number of input units = dimension of features x(i)x^{(i)}x(i)
+    Number of output units = number of classes
+    Number of hidden units per layer = usually more the better (must balance with cost of computation as it increases with more hidden units)
+    Defaults: 1 hidden layer. If you have more than 1 hidden layer, then it is recommended that you have the same number of units in every hidden layer.
+
+Training a Neural Network
+
+    Randomly initialize the weights
+    Implement forward propagation to get hΘ(x(i))h_\Theta(x^{(i)})hΘ​(x(i)) for any x(i)x^{(i)}x(i)
+    Implement the cost function
+    Implement backpropagation to compute partial derivatives
+    Use gradient checking to confirm that your backpropagation works. Then disable gradient checking.
+    Use gradient descent or a built-in optimization function to minimize the cost function with the weights in theta.
+
+When we perform forward and back propagation, we loop on every training example:
+
+The following image gives us an intuition of what is happening as we are implementing our neural network:
+
+## Autonomous driving
+Driving a car using backpropagation
+
+## Exercise
+
+The input data:
+![](square_of_number.png)
+
+Exercises seem heavy.
 
 
