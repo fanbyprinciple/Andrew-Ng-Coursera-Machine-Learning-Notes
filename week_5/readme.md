@@ -189,3 +189,9 @@ Cost function:
 
 Regularisation term:
 ![](regularisation.png)
+
+Sigmoid gradient:
+![](sigmoid_gradient.png)
+
+Random Initialisation:
+![](initialisation.png)
