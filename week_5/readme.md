@@ -195,3 +195,7 @@ Sigmoid gradient:
 
 Random Initialisation:
 ![](initialisation.png)
+
+Back propagation not working:
+need to verify from this code:
+https://github.com/LilianYe/Andrew-Ng-Machine-Learning-Programming-solutions-/blob/master/mlclass-ex4/nnCostFunction.m

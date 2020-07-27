@@ -47,10 +47,10 @@ a1 = [ones(m,1) X];
 
 #theta1 has size 25 X 401
 #theta2 has size 10 X 26
-theta_matrix = [Theta1, Theta2]
 
+z2 = Theta1 * a1';
 
-a2 = sigmoid(Theta1 * a1');
+a2 = sigmoid(z2);
 a2 = [ones(size(a1),1) a2'];
 a3 = sigmoid(Theta2 * a2');
 J = 1/m * sum(sum((-y_matrix' .* log(a3) - (1 - y_matrix').* log(1 - (a3)))));
@@ -70,7 +70,25 @@ J = 1/m * sum(sum((-y_matrix' .* log(a3) - (1 - y_matrix').* log(1 - (a3)))));
 %         Hint: We recommend implementing backpropagation using a for-loop
 %               over the training examples if you are implementing it for the 
 %               first time.
-%
+
+# m is th enumber of training examples
+# n is the number of training features
+# h is the number of units in hidden layer NOT including the bias layer
+# r is th enumber of output classifications
+
+d3 = a3' - y;
+z2 = z2';
+d2 = d3 * Theta2(:, 2:end) .* sigmoidGradient(z2);
+
+# we are excluding the first column of Theta2 because the hidden layer bias unit has no connection to the input laer so we do not use backpropagation for it.
+delta1 = Theta1_grad + d2' * a1;
+delta2 = Theta2_grad + d3' * a2;
+
+
+Theta1_grad = (delta1)/m;
+Theta2_grad = (delta2)/m;
+
+
 % Part 3: Implement regularization with the cost function and gradients.
 %
 %         Hint: You can implement this around the code for
@@ -88,6 +106,15 @@ reg_term = (lambda/(2 * m))* (reg_term_1 + reg_term_2);
 
 J = J + reg_term;
 
+# regularised gradients
+
+new_grad_t1 = Theta1;
+new_grad_t1(:,1) = 0;
+new_grad_t2 = Theta2;
+new_grad_t2(:,1) = 0;
+
+Theta1_grad = Theta1_grad + lambda * (new_grad_t1)/m;
+Theta2_grad = Theta2_grad + lambda * (new_grad_t2)/m;
 
 
 % -------------------------------------------------------------
