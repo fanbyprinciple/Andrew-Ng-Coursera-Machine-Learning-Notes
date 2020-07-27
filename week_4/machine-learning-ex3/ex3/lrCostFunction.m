@@ -54,7 +54,7 @@ reg_cost =  lambda/(2 * m) * sum(new_theta.^ 2);
 
 J = 1/m * sum(-y .*log(sigmoid(z)) - (1-y).*log(1-sigmoid(z))) + reg_cost;
 
-new_theta = [0; new_theta];
+new_theta = [0 ; new_theta];
 
 reg_grad = lambda/m * new_theta;
 

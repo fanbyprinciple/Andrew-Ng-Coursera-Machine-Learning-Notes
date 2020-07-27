@@ -181,4 +181,17 @@ The input data:
 
 Exercises seem heavy.
 
+answers from here:
+https://www.youtube.com/watch?v=0CQ5PU_8uUw
 
+Cost function:
+![](cost_function.png)
+
+Regularisation term:
+![](regularisation.png)
+
+Sigmoid gradient:
+![](sigmoid_gradient.png)
+
+Random Initialisation:
+![](initialisation.png)
