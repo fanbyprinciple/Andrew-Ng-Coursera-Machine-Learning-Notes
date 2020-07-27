@@ -39,13 +39,13 @@ Theta2_grad = zeros(size(Theta2));
 %         cost function computation is correct by verifying the cost
 %         computed in ex4.m
 
-keyboard
-X = [ones(m,1) X]
+y_matrix = eye(num_labels)
 
 #theta1 has size 25 X 401
 #theta2 has size 10 X 26
+theta_matrix = [Theta1, Theta2]
 
-J = (1/m) * (-y * log())
+
 
 %
 % Part 2: Implement the backpropagation algorithm to compute the gradients
