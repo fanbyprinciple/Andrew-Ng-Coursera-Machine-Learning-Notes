@@ -60,9 +60,9 @@ for k = 1:K,
   y1(:,k) = y == k;
 end
 
-one = ones(m, K);
-J = sum(sum(-y1.*log(a3)-(one-y1).*log(one-a3)));
-J = J/m;
+#one = ones(m, K);
+#J = sum(sum(-y1.*log(a3)-(one-y1).*log(one-a3)));
+#J = J/m;
 
 #new_t1 = Theta1(:, 2:size(Theta1,2));
 #new_t2 = Theta2(:, 2:size(Theta2,2));
@@ -100,17 +100,15 @@ J = J + lambda / 2 / m * (sum(sum(theta1.^2))+ sum(sum(theta2.^2)));
 # h is the number of units in hidden layer NOT including the bias layer
 # r is th enumber of output classifications
 
-d3 = a3 - y1;
+d3 = a3 - y;
 d2 = d3 * theta2 .* sigmoidGradient(z2);
 
 # we are excluding the first column of Theta2 because the hidden layer bias unit has no connection to the input laer so we do not use backpropagation for it.
 delta1 = Theta1_grad + d2' * a1;
-
-Theta1_grad = (delta1)/m;
-
 delta2 = Theta2_grad + d3' * a2;
 
 
+Theta1_grad = (delta1)/m;
 Theta2_grad = (delta2)/m;
 
 
