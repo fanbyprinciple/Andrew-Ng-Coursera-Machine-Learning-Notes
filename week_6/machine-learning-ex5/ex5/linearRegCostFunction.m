@@ -28,15 +28,15 @@ Theta(1) = [];
 J = J + lambda * sum(Theta.^2) /(2 * m);
 
 # gradient calculations
-#sum_term =  lambda * Theta / m;
-#sum_term = [0; sum_term]
-#grad = ((1/m)* (predictions-y)' * X) .+ sum_term;
+sum_term =  lambda * Theta / m;
+sum_term = [0; sum_term];
+grad = ((1/m)* X' * (predictions-y) ) .+ sum_term;
 
 # what is the difference between this and above check
 
-gradient_regularising_term = lambda/m * Theta;
-gradient_regularising_term = [0; gradient_regularising_term];
-grad = (1/ m * X' * (predictions - y)).+ gradient_regularising_term;
+#gradient_regularising_term = lambda/m * Theta;
+#gradient_regularising_term = [0; gradient_regularising_term];
+#grad = (1/ m * X' * (predictions - y)).+ gradient_regularising_term;
 
 
 % =========================================================================

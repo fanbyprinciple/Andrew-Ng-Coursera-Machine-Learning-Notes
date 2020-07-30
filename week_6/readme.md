@@ -65,4 +65,7 @@ The problem:
 Wrong regression:
 ![](bad_regression.png)
 
+Wrong training curve by me:
+![](wrong_training.png)
+
 
