@@ -1,4 +1,4 @@
-## Decididng what to try next
+## Deciding what to try next
 
 Debugging wehn given a large number of errors in the predictions -
 1. we cantake more samples
@@ -68,4 +68,25 @@ Wrong regression:
 Wrong training curve by me:
 ![](wrong_training.png)
 
+Correct curve after not using full validation and training curve for training error
 
+![](correct_curve.png)
+
+Poly curve 0 lambda
+![](poly_curve_0_lambda.png)
+
+Poly regression 0 lambda
+![](poly_reg_0_lambda.png)
+
+Poly fit at 1 lambda
+![](poly_fit_1_lambda.png)
+
+poly fit at 100 lambda
+![](poly_fit_100_lambda.png)
+
+Validation at optimum lambda
+![](validation_at_lambda.png)
+
+OPtional exercise 3.5 needs to be done. Done with random values of i,
+gives this:
+![](wild_cross_validation.png)

@@ -54,28 +54,12 @@ error_val   = zeros(m, 1);
 % ---------------------- Sample Solution ----------------------
 
 for i = 1:m,
-  
-  # for random
-  
-  #X_sub = randsample(X, i, replacement=false);
-  #y_sub = randsample(y, i, replacement=false);
-  
-  #a = randn(m,1);
-  % determine how many elements is ten percent
-  #numelements = i
-  % get the randomly-selected indices
-  #indices = randperm(length(a));
-  #indices = indices(1:numelements);
-  % choose the subset of a you want
-  #X_sub =  X(indices,:);
-  #y_sub = y(indices, :);
-  
-  # for non random
   X_sub = X(1:i,:);
   y_sub = y(1:i);
   
-  #keyboard
   theta = trainLinearReg(X_sub,y_sub, lambda);
+  
+ 
   [error_train(i), grad] = linearRegCostFunction(X_sub, y_sub, theta, 0);
   
   [error_val(i), grad ] = linearRegCostFunction(Xval, yval, theta, 0);
