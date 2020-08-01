@@ -90,3 +90,54 @@ Validation at optimum lambda
 OPtional exercise 3.5 needs to be done. Done with random values of i,
 gives this:
 ![](wild_cross_validation.png)
+
+
+## Building a spamclasssifier
+
+So how could you spend your time to improve the accuracy of this classifier?
+
+    Collect lots of data (for example "honeypot" project but doesn't always work)
+    Develop sophisticated features (for example: using email header data in spam emails)
+    Develop algorithms to process your input in different ways (recognizing misspellings in spam).
+
+
+### Error analysis
+The recommended approach to solving machine learning problems is to:
+
+    Start with a simple algorithm, implement it quickly, and test it early on your cross validation data.
+    Plot learning curves to decide if more data, more features, etc. are likely to help.
+    Manually examine the errors on examples in the cross validation set and try to spot a trend where most of the errors were made.
+
+### Error metrics for skewed classes
+
+Skewed classes - where one instance of class is more likely to come than the other its is called skewed claass
+
+Precision vs recall
+
+Precision : of all te prediction we have y=1 how many actually have cancer
+
+= true positive / true positive + false positive
+
+Recall : of all the patients that have cancer how many did we derect as having cancer
+
+= true positive /true positive + false negative
+
+## Trading off precision and recall
+
+![](precision_vs_recall.png)
+
+F1 score = 2 * P * R / (P+ R)
+
+Measure precision (P) and recall (R) on the cross validation set and choose the value of threshold which maximizes 2PRP+R2\frac{PR}{P+R}2P+RPR​
+
+## Data for machine learning
+
+More data the better.
+accuracy = (true positives + true negatives) / total_examples
+
+## Exercise
+
+precision = 85/975
+recall = 85 /100
+F2score = 0.1581
+
