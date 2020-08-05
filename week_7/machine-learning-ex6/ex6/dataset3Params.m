@@ -23,23 +23,31 @@ sigma = 0.3;
 C_check = [0.01,0.03,0.1, 0.3, 1,3, 10, 30];
 sigma_check = [0.01,0.03,0.1, 0.3, 1,3, 10, 30];
 
-max_prediction_error = infinity;
-for i = 1:size(C_check)(1):
-  for j = 1:size(sigma_check)(1):
-    predictions = svmPredict(gaussianKernel, Xval);
+% create a blank result matrix_type
+results = zeros(length(C_check)* length(sigma_check), 3);
+
+
+row = 1;
+for C_val = C_check,
+  for sigma_val = sigma_check,
     
-    prediction_error = mean(double(predictions ~= yval);
+    % training call
+    model= svmTrain(X, y, C_val, @(x1, x2) gaussianKernel(x1, x2, sigma_val));
     
-    if (prediction_error <max_prediction_error):
-      max_prediction_error = prediction_error;
-      C = C_check(i);
-      sigma = sigma_check(i);
+    % validation
+    predictions = svmPredict(model, Xval);
+
+    prediction_error = mean(double(predictions ~= yval));
+    results(row,:) = [C_val sigma_val prediction_error];
+    row = row + 1
       
-    endif
     
   endfor
 endfor
 
+[v i] = min(results(:,3))
+C = results(i, 1)
+sigma =results(i, 2)
 %  Note: You can compute the prediction error using 
 %        mean(double(predictions ~= yval))
 %
