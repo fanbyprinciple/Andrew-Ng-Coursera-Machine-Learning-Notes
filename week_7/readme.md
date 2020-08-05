@@ -43,6 +43,26 @@ if n is small and m is intermediate
 if n is small and m is large then use more features witohut
 
 
+### from notes
+
+Choosing SVM Parameters
+
+Choosing C (recall that C=1λC = \dfrac{1}{\lambda}C=λ1​
+
+    If C is large, then we get higher variance/lower bias
+    If C is small, then we get lower variance/higher bias
+
+The other parameter we must choose is σ2σ^2σ2 from the Gaussian Kernel function:
+
+With a large σ2σ^2σ2, the features fi vary more smoothly, causing higher bias and lower variance.
+
+With a small σ2σ^2σ2, the features fi vary less smoothly, causing lower bias and higher variance.
+Multi-class Classification
+
+Many SVM libraries have multi-class classification built-in.
+
+You can use the one-vs-all method just like we did for logistic regression, where y∈1,2,3,…,Ky \in {1,2,3,\dots,K}y∈1,2,3,…,K with Θ(1),Θ(2),…,Θ(K)\Theta^{(1)}, \Theta^{(2)}, \dots,\Theta{(K)}Θ(1),Θ(2),…,Θ(K). We pick class i with the largest (Θ(i))Tx(\Theta^{(i)})^Tx(Θ(i))Tx.
+
 # Exercises
 
 ![](dataset.png)
