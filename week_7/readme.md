@@ -78,3 +78,6 @@ You can use the one-vs-all method just like we did for logistic regression, wher
 ![](decision_boundary_d3.png)
 
 Need to modify for value of C and sigma.
+
+Still don;t know how emailspam works but successful submission after following the titorial here:
+https://www.coursera.org/learn/machine-learning/discussions/all/threads/g2VB7po6EeWKNwpBrKr_Fw
