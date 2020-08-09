@@ -102,6 +102,35 @@ We use pca only when we have to do it
 
 ## Exercise
 
+### Kmeans
 ![](after_finding_closest_centroid.png)
 
+![](kmeans_progression.png)
+
+![](kmeans_image.gif)
+
+
+on custom image:
+![](compressed.png)
+
+### Bird compressedimage
+![](bird.png)
+
+### pca projection
+![](pca_projection.png)
+
+### On face dataset
+Faces before:
+![](face.png)
+
+Faces after:
+![](face_after.png)
+
+Recovered faces:
+![](recovered.png)
+
+### Kmeans with PCA
+![](3d_kmeans.png)
+
+![](kmeans_projection.png)
 

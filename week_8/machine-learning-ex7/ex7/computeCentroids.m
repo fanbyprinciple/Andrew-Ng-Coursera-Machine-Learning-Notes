@@ -26,8 +26,35 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
+#for i=1:length(K),
+#  sum_i = zeros(size(m,1));
+#  num_i = 0;
+  
+#  for j=1:length(idx),
+#    if(idx(j) == i)
+#      sum_i += X(j);
+#      num_i += 1;
+#    endif
+#  endfor
+  
+#  centroids = 
+  # select from idx where idx is in i
+  # sum = sum of all memebers in i
+  # number  =  no of idx values
+  
+#endfor
+#mean = 1/number_of_k_class * sum (all_members_of_k_class)
 
 
+for i=1:K,
+  sel = find(idx == i);
+  
+  if(sel)
+    centroids(i,:) = mean(X(sel,:),1);
+  endif
+  #centroids(i,:) = mean(X(idx ==i,:));
+
+endfor
 
 
 
