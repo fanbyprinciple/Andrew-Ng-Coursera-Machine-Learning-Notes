@@ -69,7 +69,38 @@ parameters : mybelongs to real numberand@
 ![](difference_2.png)
 
 
-Next video:
-https://www.coursera.org/learn/machine-learning/lecture/Rhg6r/problem-formulation
+
+# Recommender systems
+
+## Predicting movie rating
+![](optimisation_cf.png)
+
+## Collaborative filtering
+if you havex you can predict theta and if you hav theta you can predict x, each user is helping th esystem for universal imporivement of a sercice.
+![](gradient_descent.png)
+ 
+![](collaborative_filtering.png) 
+
+## Collaborative filtering algorithm
+
+combining both finding theta and finding x
+![](combining_theta_x.png)
+
+combining gradient descent
+![](combining_gradient_descent.png)
+
+## Vectorisation implementation 
+
+finding related movies :
+finding movies with smallest difference between X(i) and X(j) = ||x(i) - x(j)||
+
+## Mean normalisation
+
+The best way to optimise would ebe setting every theta value to zero to minimise however that doesnt help us
+
+we subtract the mean of data so that even if you have not givenany rating then still youll give averagerating
+
+We have not used feature scaling because they are already on the same scale of zero to 5 stars.
+
 
 
