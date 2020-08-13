@@ -102,5 +102,12 @@ we subtract the mean of data so that even if you have not givenany rating then s
 
 We have not used feature scaling because they are already on the same scale of zero to 5 stars.
 
+# Exercise
+
+![](the_dataset.png)
+
+Gaussian estimate:
+![](gaussian_estimate.png)
+
 
 
