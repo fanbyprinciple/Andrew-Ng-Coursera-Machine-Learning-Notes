@@ -102,12 +102,22 @@ we subtract the mean of data so that even if you have not givenany rating then s
 
 We have not used feature scaling because they are already on the same scale of zero to 5 stars.
 
+# Quiz
+Quiz was extra tough because i think i sleep walked through the lectures
+![](quiz1.png)
+![](quiz2.png)
+![](quiz3.png)
+![](quiz4.png)
 # Exercise
 
 ![](the_dataset.png)
 
 Gaussian estimate:
 ![](gaussian_estimate.png)
+
+outliers:
+I did cheat even though it was so simple.
+![](anomaly_detected.png)
 
 
 
