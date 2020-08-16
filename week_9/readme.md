@@ -1,5 +1,9 @@
 # Anomaly detection
 
+better notes :
+https://www.holehouse.org/mlclass/15_Anomaly_Detection.html
+
+
 ## Motivatioin
 
 if p(x) < epsilon then flag anomaly
@@ -108,6 +112,7 @@ Quiz was extra tough because i think i sleep walked through the lectures
 ![](quiz2.png)
 ![](quiz3.png)
 ![](quiz4.png)
+![](quiz5.png)
 # Exercise
 
 ![](the_dataset.png)
@@ -116,8 +121,17 @@ Gaussian estimate:
 ![](gaussian_estimate.png)
 
 outliers:
-I did cheat even though it was so simple.
 ![](anomaly_detected.png)
+
+Movie Rating
+![](movie_rating1.png)
+
+![](movie_rating2.png)
+
+Iknow that collaborative filtering is something that i need to revisit.
+
+
+
 
 
 
