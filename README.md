@@ -1,5 +1,13 @@
-# andrew_ng_coursera_notes_2020
+# Andrew Ng
 
-Notes compiled from Andrew ng  online class
+Notes compiled from Andrew ng  online class.
 
-Week 1 (add hyper link here)
+Each folder has individual lectures notes, there is a lot of errata, need to improve but programming exercises are complete.
+
+### Summary:
+![](summary.png)
+
+### Message:
+Hope you'll make wonderful applications
+
+![](thank_you.png)
